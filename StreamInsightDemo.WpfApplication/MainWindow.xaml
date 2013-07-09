@@ -3,11 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="183.507" Width="525">
     <Grid>
-        <TextBox x:Name="pathTextBox" HorizontalAlignment="Left" Height="23" Margin="71,10,0,0" TextWrapping="Wrap" Text="C:\\Users\\San.Sky\\SkyDrive\\Code\\Demo\\StreamInsight_POC\\Temp\\B.xml" VerticalAlignment="Top" Width="436"/>
+        <TextBox x:Name="pathTextBox" HorizontalAlignment="Left" Height="23" Margin="71,10,0,0" TextWrapping="Wrap" Text="C:\\Repo\\StreamInsightDemo\\Doc\\sampleB.xml" VerticalAlignment="Top" Width="436"/>
         <Label Content="Path" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="nodeTextBox" HorizontalAlignment="Left" Height="23" Margin="71,38,0,0" TextWrapping="Wrap" Text="body" VerticalAlignment="Top" Width="436"/>
         <Label Content="Node" HorizontalAlignment="Left" Margin="10,34,0,0" VerticalAlignment="Top"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="432,124,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Send" HorizontalAlignment="Left" Margin="432,124,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
 
     </Grid>
 </Window>
