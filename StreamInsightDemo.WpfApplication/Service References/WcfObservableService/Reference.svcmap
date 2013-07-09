@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="75a84e02-1107-4fb3-80f9-d6446dfd74d9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8088/StreamInsight/wcf/Source/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.wsdl" MetadataType="Wsdl" ID="3d83b8b3-236b-40af-afd3-445a4cb962af" SourceId="1" SourceUrl="http://localhost:8088/StreamInsight/wcf/Source/?wsdl=wsdl0" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="d3b0ca01-edc5-4605-841a-648af6b7cf01" SourceId="1" SourceUrl="http://localhost:8088/StreamInsight/wcf/Source/?xsd=xsd1" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="d6aa2705-0da8-449c-8f83-fe97ca4944f3" SourceId="1" SourceUrl="http://localhost:8088/StreamInsight/wcf/Source/?disco" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="289dfbd3-af97-4454-8b5d-25464375cac1" SourceId="1" SourceUrl="http://localhost:8088/StreamInsight/wcf/Source/?xsd=xsd2" />
+    <MetadataFile FileName="WcfObservableService.wsdl" MetadataType="Wsdl" ID="4830b441-bc1d-40d5-b64b-bc391c3a2e9c" SourceId="1" SourceUrl="http://localhost:8088/StreamInsight/wcf/Source/?wsdl" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="9bd01bd2-996a-487f-92be-1063abda7173" SourceId="1" SourceUrl="http://localhost:8088/StreamInsight/wcf/Source/?xsd=xsd0" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="0dfc1ae7-3271-4014-a644-28952e1ec5e4" SourceId="1" SourceUrl="http://localhost:8088/StreamInsight/wcf/Source/?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Microsoft.ServiceModel.WcfObservable" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Microsoft.ServiceModel.WcfObservable" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Microsoft.ServiceModel.WcfObservable/Imports">
+      <xsd:import schemaLocation="http://localhost:8088/StreamInsight/wcf/Source/?xsd=xsd0" namespace="http://Microsoft.ServiceModel.WcfObservable" />
+      <xsd:import schemaLocation="http://localhost:8088/StreamInsight/wcf/Source/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8088/StreamInsight/wcf/Source/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost:8088/StreamInsight/wcf/Source/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/StreamInsightDemo.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWCFObservable_OnCompleted_InputMessage">
+    <wsdl:part name="parameters" element="tns:OnCompleted" />
+  </wsdl:message>
+  <wsdl:message name="IWCFObservable_OnError_InputMessage">
+    <wsdl:part name="parameters" element="tns:OnError" />
+  </wsdl:message>
+  <wsdl:message name="IWCFObservable_OnNext_InputMessage">
+    <wsdl:part name="parameters" element="tns:OnNext" />
+  </wsdl:message>
+  <wsdl:message name="IWCFObservable_OnNext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OnNextResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWCFObservable">
+    <wsdl:operation name="OnCompleted">
+      <wsdl:input wsaw:Action="http://Microsoft.ServiceModel.WcfObservable/IWCFObservable/OnCompleted" message="tns:IWCFObservable_OnCompleted_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnError">
+      <wsdl:input wsaw:Action="http://Microsoft.ServiceModel.WcfObservable/IWCFObservable/OnError" message="tns:IWCFObservable_OnError_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnNext">
+      <wsdl:input wsaw:Action="http://Microsoft.ServiceModel.WcfObservable/IWCFObservable/OnNext" message="tns:IWCFObservable_OnNext_InputMessage" />
+      <wsdl:output wsaw:Action="http://Microsoft.ServiceModel.WcfObservable/IWCFObservable/OnNextResponse" message="tns:IWCFObservable_OnNext_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
