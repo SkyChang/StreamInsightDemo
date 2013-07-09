@@ -41,11 +41,6 @@ namespace StreamInsightDemo.InterfaceWCF.Observables
             _ObsInstance.OnError(error);
         }
 
-        //public void OnNext(InputEvent value)
-        //{
-        //    _ObsInstance.OnNext(value);
-        //}
-
         public void OnNext(InputEvent value)
         {
             _ObsInstance.OnNext(value);
