@@ -49,7 +49,18 @@ namespace StreamInsightDemo.WpfApplication
                 int upperLimitTemperature;
                 int nowTemperature;
 
-                string temperature = o.Element("temperature_log").Value;
+                
+
+                string temperature = o.Element("body").Element("temperature_log").Value;
+
+                //Time
+                string timeString = o.Element("head").Element("timestamp").Value; 
+
+                //地點
+                string siteString = temperature.Substring(
+                    temperature.IndexOf("PrintToDatalog on Site", 0) + 1, 1);
+
+                //溫度
                 string lowerLimitTemperatureString = temperature.Substring(
                     temperature.IndexOf("LSL=", 0) + 4, 2);
                 string upperLimitTemperatureString = temperature.Substring(
@@ -67,6 +78,8 @@ namespace StreamInsightDemo.WpfApplication
                     inputEvnet.Tp = nowTemperature;
                     inputEvnet.Usl = upperLimitTemperature;
                     inputEvnet.Lsl = lowerLimitTemperature;
+                    inputEvnet.time = timeString;
+                    inputEvnet.site = siteString;
 
                     try
                     {

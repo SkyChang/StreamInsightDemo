@@ -45,7 +45,8 @@ namespace StreamInsightDemo
 
                 var query = from x in inputStream
                             where x.Tp > x.Usl || x.Tp < x.Lsl
-                            select new OutputEvent { O = x.Tp };
+                            select new OutputEvent { Tp = x.Tp , Usl = x.Usl , 
+                                site = x.site , Lsl = x.Lsl , time = x.time };
 
                 Console.WriteLine("StreamInsight application using wcf artifacts (WcfObservable)");
                 using (query.Bind(observableWcfSink).Run())

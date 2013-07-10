@@ -94,7 +94,7 @@ namespace StreamInsightDemo.InterfaceWCF.Observers
     {
         string connectionString = @"Data Source=(localdb)\V11.0;Initial Catalog=streaminsight;Integrated Security=True;MultipleActiveResultSets=True";
         string queryString =
-            "INSERT INTO AlertTable (Tp) VALUES (@tp)";
+            "INSERT INTO AlertTable (Time,Site,Lsl,Usl,Tp) VALUES (@time,@site,@lsl,@usl,@tp)";
 
 
         //ServiceHost _selfHost;
@@ -141,7 +141,11 @@ namespace StreamInsightDemo.InterfaceWCF.Observers
             {
                 // Create the Command and Parameter objects.
                 SqlCommand command = new SqlCommand(queryString, connection);
-                command.Parameters.AddWithValue("@tp", value.O);
+                command.Parameters.AddWithValue("@time", value.time);
+                command.Parameters.AddWithValue("@site", value.site);
+                command.Parameters.AddWithValue("@lsl", value.Lsl);
+                command.Parameters.AddWithValue("@usl", value.Usl);
+                command.Parameters.AddWithValue("@tp", value.Tp);
 
                 // Open the connection in a try/catch block. 
                 // Create and execute the DataReader, writing the result
